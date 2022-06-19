@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26197916666666665" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/drawable-v24/item_color.xml" value="0.19444444444444445" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26197916666666665" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_add_ingredient.xml" value="0.2361111111111111" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_add_shelflife.xml" value="0.24583333333333332" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_detail_recipe.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_ingredient_recipe.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_popup_shelflife.xml" value="0.24583333333333332" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_search_recipe.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_type_recipe.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/activity_type_recipe1.xml" value="0.12314814814814815" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/fragment1.xml" value="0.3472222222222222" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/fragment2.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/fragment3.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/layout/fragment4.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/menu/menu_bottom.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/SampleTab2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25794871794871793" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable-v24/item_color.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/button_round.xml" value="0.11041666666666666" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/edittext_rounded_corner_rectangle.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/edittext_rounded_corner_rectangle2.xml" value="0.10648148148148148" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/edittext_rounded_corner_rectangle3.xml" value="0.10648148148148148" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/edittext_rounded_corner_rectangle_2.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/edittext_rounded_corner_rectangle_3.xml" value="0.16944444444444445" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/edittext_rounded_corner_rectangle_4.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/gridview_round.xml" value="0.10648148148148148" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/ripple_unbounded.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/drawable/text_cursor.xml" value="0.12777777777777777" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/font/custom_font_family.xml" value="0.176" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/font/nanumsquare_black.xml" value="0.2898148148148148" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/acitivy_mybmark.xml" value="0.25625" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_add_ingred.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_appinfo.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_comment.xml" value="0.25625" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_detail.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_detail2.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_find_passwd.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_fridge_add.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_gridview.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_honeytip.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_login2.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_my_detail.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_my_detail_edit.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_mybmark.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_myinfo.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_myinfo_social.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_mylike.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_myrecipe.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_popuptest.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_recommend_recipe.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_result.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_search_bylist.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_search_ingred.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_searchbylist.xml" value="0.17777777777777778" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_set_img.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_splash.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_tip.xml" value="0.2375" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_tip_edit.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_tipupload.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_type_recipe.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_upload.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_upload_ing1.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/activity_upload_ing2.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_mypage.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_mypage_bflogin.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_mypage_social.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_recipe.xml" value="0.3407960199004975" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_refrige.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/fragment_refrige_bflogin.xml" value="0.12135416666666667" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/gridview_list_item.xml" value="0.6" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/list_textview.xml" value="0.27395833333333336" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/listview_comment.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/listview_item.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/layout/listview_recommend.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/menu/menu_bottom.xml" value="0.2375" />
+        <entry key="..\:/AndroidStudioProjects/sw_project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/SW_Project/app/src/main/res/layout/fragment2.xml" value="0.24791666666666667" />
+        <entry key="..\:/SW_Project/app/src/main/res/layout/fragment3.xml" value="0.13805970149253732" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_add_ingred.xml" value="0.2708333333333333" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_detail.xml" value="0.2490740740740741" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_find_passwd.xml" value="0.264" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_ingredient_recipe.xml" value="0.22962962962962963" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_login2.xml" value="0.264" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_main.xml" value="0.2490740740740741" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/fragment_home.xml" value="0.22962962962962963" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/fragment_mypage.xml" value="0.1935185185185185" />
+        <entry key="..\:/sw_project/app/src/main/res/layout/fragment_refrige.xml" value="0.1" />
+        <entry key="..\:/sw_project/app/src/main/res/menu/menu_bottom.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
