@@ -197,7 +197,7 @@ public class Upload extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for(int i=0; i<selectedname.size(); i++)
-                    Toast.makeText(getApplicationContext(), "sel : "+selectedname.get(i)+" "+selectedamount.get(i), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "sel : "+selectedname.get(i)+" "+selectedamount.get(i), Toast.LENGTH_SHORT).show();
 
                 for(int i=0; i<del_list2_name.size(); i++){
                     int idx = selectedname.indexOf(del_list2_name.get(i));
