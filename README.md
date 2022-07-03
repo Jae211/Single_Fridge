@@ -40,7 +40,7 @@ You can create an issue or email us to rememberus320@gmail.com
 ✅ 좋아요와 북마크는 클릭 시 아이콘의 색이 채워집니다.  
 ✅ 댓글 작성 후 나타나는 우측의 삭제 아이콘은 자신의 댓글인 경우에만 표시됩니다.  
 
-### 🍽 냉장고 탭 - 재료 추가, 추천 레시피, 재료 삭제
+### 🍽 냉장고 탭
 <img src="https://user-images.githubusercontent.com/71889628/177030133-563e0e87-18d0-417c-b83a-fe5393a75601.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177030141-eefa9123-02e4-43c3-a3cb-67a6e377957c.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177030592-74a67e47-f605-4276-b7a7-d1b825634b53.gif" width="200" height="400"><br/>
@@ -64,9 +64,9 @@ You can create an issue or email us to rememberus320@gmail.com
 ### 🍽 레시피 업로드
 <img src="https://user-images.githubusercontent.com/71889628/177032761-40c83a0b-4323-4a1c-8cd2-62906e31d540.png" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032763-d94938d9-d6e0-4c7e-b589-72bf811242cf.png" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177032766-1da4e14e-12d3-4e72-860c-6054182abff4.png" width="200" height="400">&nbsp;
+<img src="https://user-images.githubusercontent.com/71889628/177032766-1da4e14e-12d3-4e72-860c-6054182abff4.png" width="200" height="400"><br/>
 <img src="https://user-images.githubusercontent.com/71889628/177032768-33f9f035-0cf4-4921-a8e7-1406cf32b094.png" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177032769-8720e6c0-2a5c-446b-976c-fc94be04b574.png" width="200" height="400">&nbsp;
+<img src="https://user-images.githubusercontent.com/71889628/177032769-8720e6c0-2a5c-446b-976c-fc94be04b574.png" width="200" height="400"><br/>
 <img src="https://user-images.githubusercontent.com/71889628/177032771-a56b20ef-d2e2-45d0-ad81-e154b05f6bb8.png" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032776-373bf1ae-75fd-4e4e-ae76-ac4a285fad18.png" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032779-e806a170-afab-44dc-8b65-9fcd0a0148ec.png" width="200" height="400"><br/>
@@ -79,25 +79,32 @@ You can create an issue or email us to rememberus320@gmail.com
 
 ### 🍽 레시피 수정
 <img src="https://user-images.githubusercontent.com/71889628/177032207-6e08202f-0ee9-42b7-8a97-abdc623ea877.gif" width="200" height="400"><br/>
-✅ 수정 및 삭제 버튼은 자신이 올린 레시피인 경우에만 확인이 가능하며, 레시피 삭제는 수정 버튼 우측의 삭제 버튼을 통해 가능합니다. 
+✅ 수정 및 삭제 버튼은 자신이 올린 레시피인 경우에만 확인이 가능하며, 레시피 삭제는 수정 버튼 우측의 삭제 버튼을 통해 가능합니다.  
 
 ### 🍽 마이페이지 탭
 <img src="https://user-images.githubusercontent.com/71889628/177032653-cf52c030-06d3-40d2-9913-bb5d184418ea.png" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032656-5ce840f9-1427-43b6-b68c-73e5a5f2c280.png" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032661-14ac9d73-3ef0-415e-972f-2207ae552261.png" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177032662-f45c5ff2-6607-4e74-8452-aa683747214e.png" width="200" height="400">&nbsp;
-
+<img src="https://user-images.githubusercontent.com/71889628/177032662-f45c5ff2-6607-4e74-8452-aa683747214e.png" width="200" height="400"><br/>
+✨ 마이페이지 화면으로, 순서대로 내 레시피와 좋아요한 레시피, 서비스 정보 확인 화면입니다.  
+✅ 마이페이지 탭에서는 내정보 수정과 로그아웃이 가능하고, 내가 업로드한 레시피, 좋아요/북마크한 레시피를 확인할 수 있습니다.  
+✅ 서비스 정보 확인 페이지에서는 사용한 아이콘과 폰트에 대한 라이선스와 안드로이드 스튜디오 관련 오픈소스 라이선스를 확인할 수 있습니다.  
 
 ### 🍽 내 정보 수정
 <img src="https://user-images.githubusercontent.com/71889628/177032467-0171b21c-dcb0-480e-a836-1121b70ce017.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032474-6645fb48-6265-4512-a8c3-b82dd4d1f34c.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032475-1e6e5c39-1cd0-46b8-98eb-f9a731282db4.gif" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177032471-74bcd0db-2ec7-4269-a1d7-3a159863cab7.gif" width="200" height="400">&nbsp;
+<img src="https://user-images.githubusercontent.com/71889628/177032471-74bcd0db-2ec7-4269-a1d7-3a159863cab7.gif" width="200" height="400"><br/>
+✨ 내 정보 수정 화면입니다.  
+✅ 일반 로그인의 경우 닉네임과 비밀번호, 이메일, 프로필 사진 변경이 가능하며 SNS 로그인의 경우 프로필 사진만 변경할 수 있습니다.  
+✅ 닉네임을 변경할 경우 하단에 중복 확인이라는 버튼이 생성되고, 중복 확인을 하지 않으면 정보 수정이 불가능합니다. 이메일의 경우도 동일하게 이메일 인증 과정을 거쳐야 정보 수정이 가능합니다.  
 
 ### 🍽 비로그인 시 예외처리
 <img src="https://user-images.githubusercontent.com/71889628/177032021-419c2d7b-56b0-4d90-b92f-8b85a7e21e9c.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177032023-2ca2159d-27c4-4688-9165-f4598502658c.gif" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177032025-a5775a00-d609-4d7a-bc97-ba82ae792a3b.gif" width="200" height="400">&nbsp;
+<img src="https://user-images.githubusercontent.com/71889628/177032025-a5775a00-d609-4d7a-bc97-ba82ae792a3b.gif" width="200" height="400"><br/>
+✨ 순서대로 냉장고 탭 클릭 시, 좋아요와 북마크 버튼 클릭 시, 댓글 작성 버튼 클릭 시 화면입니다.  
+✅ 로그인을 하지 않은 경우 기능에 제한이 있습니다. 위처럼 냉장고 탭을 사용할 수 없고, 좋아요와 북마크 기능, 댓글 작성을 할 수 없으며 꿀팁과 레시피 업로드 또한 불가능합니다.  
 
 ### 🍽 회원가입, 로그인/로그아웃
 #### 🍽 회원가입
@@ -106,14 +113,21 @@ You can create an issue or email us to rememberus320@gmail.com
 <img src="https://user-images.githubusercontent.com/71889628/177031685-6d025b8d-aa66-4f77-92a3-334ac186ab3a.png" width="425" height="200"><br/>
 <img src="https://user-images.githubusercontent.com/71889628/177031497-ef2c3a38-8234-46e9-a620-00360c0d15fe.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177031501-dbc80a6a-db89-4db2-88db-a8307336d78c.gif" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177031502-8af62dd1-77d6-40fa-976a-eb42118a014f.gif" width="200" height="400">&nbsp;
+<img src="https://user-images.githubusercontent.com/71889628/177031502-8af62dd1-77d6-40fa-976a-eb42118a014f.gif" width="200" height="400"><br/>
+✨ 회원가입 화면입니다.  
+✅ 회원가입 시 닉네임, 이메일 주소, 인증번호, 비밀번호의 총 네 가지 정보를 사용자로부터 받습니다.  
+✅ 닉네임은 중복확인, 이메일 주소는 인증번호 확인, 비밀번호는 비밀번호 확인이 필요하며 각 확인이 완료되지 않거나 정보가 모두 입력되지 않을 경우 가입하기 버튼을 클릭해도 예외 처리가 됩니다.  
 
 #### 🍽 로그인/로그아웃
 <img src="https://user-images.githubusercontent.com/71889628/177031510-69997f24-f4c3-48e7-96a2-0d0e0dc2b260.gif" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177031517-a317b94d-6921-4fa3-bf82-1421f786353d.gif" width="200" height="400">
+<img src="https://user-images.githubusercontent.com/71889628/177031517-a317b94d-6921-4fa3-bf82-1421f786353d.gif" width="200" height="400"><br/>
+✨ 순서대로 로그인, 로그아웃 화면입니다.  
+✅ 이메일이나 비밀번호가 잘못되었을 경우 로그인이 되지 않으며, 로그인에 성공했을 경우 마이페이지 탭으로 redirect 됩니다.  
+✅ 마이페이지 탭에서 로그아웃이 가능하며, 로그아웃 된 마이페이지 탭으로 redirect 됩니다.  
 
 #### 🍽 SNS 로그인
 <img src="https://user-images.githubusercontent.com/71889628/177032455-3da4b641-123d-47a2-92c5-fec080b23e01.gif" width="200" height="400">&nbsp;
-<img src="https://user-images.githubusercontent.com/71889628/177032579-db07d82e-8c1b-4148-843f-c2bb8dc4f998.gif" width="200" height="400">&nbsp;
-
+<img src="https://user-images.githubusercontent.com/71889628/177032579-db07d82e-8c1b-4148-843f-c2bb8dc4f998.gif" width="200" height="400"><br/>
+✨ 순서대로 카카오, 구글 로그인입니다.  
+✅ 가입되지 않은 상태에서 각 버튼을 누를 경우, 자동으로 회원가입이 이루어지며 카카오와 구글에 저장되어 있는 이름이 닉네임으로 설정됩니다.  
 
