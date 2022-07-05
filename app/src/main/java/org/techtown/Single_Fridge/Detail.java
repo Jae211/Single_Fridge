@@ -1348,6 +1348,7 @@ public class Detail extends Activity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         JSONArray jsonArray = jsonObject.getJSONArray("Comment");
+                        commentlist.clear();
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject item = jsonArray.getJSONObject(i);
                             content = item.getString("Comment_content");

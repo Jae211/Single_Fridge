@@ -196,7 +196,7 @@ public class Upload extends AppCompatActivity {
         del_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for(int i=0; i<selectedname.size(); i++)
+                //for(int i=0; i<selectedname.size(); i++)
                     //Toast.makeText(getApplicationContext(), "sel : "+selectedname.get(i)+" "+selectedamount.get(i), Toast.LENGTH_SHORT).show();
 
                 for(int i=0; i<del_list2_name.size(); i++){
