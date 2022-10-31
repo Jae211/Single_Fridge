@@ -70,6 +70,13 @@
                 android:layout_weight="0"
                 android:src="@drawable/delete" />
 
+            <ImageView
+                android:id="@+id/button_report"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0"
+                android:src="@drawable/report" />
+
         </LinearLayout>
 
     </LinearLayout>

@@ -52,6 +52,7 @@ import org.techtown.Single_Fridge.Requests.RecipeRequest_recipe_ing;
 import org.techtown.Single_Fridge.Requests.RecipeRequest_ustate_b;
 import org.techtown.Single_Fridge.Requests.RecipeRequest_ustate_l;
 import org.techtown.Single_Fridge.R;
+import org.w3c.dom.Comment;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -747,6 +748,7 @@ public class Detail extends Activity {
             TextView username = (TextView) convertView.findViewById(R.id.text_user);
             TextView content = (TextView) convertView.findViewById(R.id.text_content);
             ImageView delete = (ImageView) convertView.findViewById(R.id.button_delete);
+            ImageView report = (ImageView) convertView.findViewById(R.id.button_report);
             ImageView User_profile = (ImageView) convertView.findViewById(R.id.profile_comment);
 
             SharedPreferences auto = getSharedPreferences("autoLogin", Activity.MODE_PRIVATE);
@@ -780,8 +782,11 @@ public class Detail extends Activity {
             RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
             queue.add(myinfoRequest_get);
 
-            if(!Integer.toString(comments.get(position).getUid()).equals(UserId))
+            if(!Integer.toString(comments.get(position).getUid()).equals(UserId)){
                 delete.setVisibility(View.GONE);
+            } else {
+                report.setVisibility(View.GONE);
+            }
 
             delete.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -811,7 +816,6 @@ public class Detail extends Activity {
                                             adapter.notifyDataSetChanged();
                                             return;
                                         } else {
-
                                             return;
                                         }
 
@@ -831,6 +835,18 @@ public class Detail extends Activity {
                     AlertDialog alert = builder.create();
                     alert.setTitle("댓글 삭제");
                     alert.show();
+                }
+            });
+
+            report.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int comment_id = comments.get(position).getId();
+                    int comment_user_id = comments.get(position).getUid();
+                    Intent intent = new Intent(Detail.this, Report.class);
+                    intent.putExtra("comment_id",comment_id);
+                    intent.putExtra("comment_user_id",comment_user_id);
+                    startActivityForResult(intent, REQUEST_CODE);
                 }
             });
 
