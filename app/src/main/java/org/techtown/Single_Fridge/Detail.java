@@ -36,6 +36,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.techtown.Single_Fridge.Requests.BlockRequest;
+import org.techtown.Single_Fridge.Requests.BlocklistRequest;
 import org.techtown.Single_Fridge.Requests.CommentRequest;
 import org.techtown.Single_Fridge.Requests.CommentRequest_rm;
 import org.techtown.Single_Fridge.Requests.CommentlistRequest;
@@ -75,6 +77,7 @@ public class Detail extends Activity {
     ListView listView = null;
     CommentAdapter adapter = null;
     ArrayList<Comment> commentlist = new ArrayList<Comment>();
+
     String content, userid, commentid, username;
 
     ImageButton back_button;
@@ -631,7 +634,7 @@ public class Detail extends Activity {
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("response", response);
+                Log.e("comment response", response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = jsonObject.getJSONArray("Comment");
@@ -641,7 +644,6 @@ public class Detail extends Activity {
                         userid = item.getString("Comment_user");
                         commentid = item.getString("Comment_id");
                         username = item.getString("User_name");
-
                         commentlist.add(new Comment(Integer.valueOf(commentid), username, content, Integer.valueOf(userid)));
                     }
                     Collections.sort(commentlist, new CommentComparator());
@@ -659,7 +661,7 @@ public class Detail extends Activity {
                 }
             }
         };
-        CommentlistRequest CommentlistRequest_ = new CommentlistRequest(recipe_Str, responseListener);
+        CommentlistRequest CommentlistRequest_ = new CommentlistRequest(recipe_Str, auto.getString("Id", null), responseListener);
         RequestQueue queue3 = Volley.newRequestQueue(getApplicationContext());
         queue3.add(CommentlistRequest_);
     }
@@ -749,6 +751,7 @@ public class Detail extends Activity {
             TextView content = (TextView) convertView.findViewById(R.id.text_content);
             ImageView delete = (ImageView) convertView.findViewById(R.id.button_delete);
             ImageView report = (ImageView) convertView.findViewById(R.id.button_report);
+            ImageView block = (ImageView) convertView.findViewById(R.id.button_block);
             ImageView User_profile = (ImageView) convertView.findViewById(R.id.profile_comment);
 
             SharedPreferences auto = getSharedPreferences("autoLogin", Activity.MODE_PRIVATE);
@@ -786,8 +789,10 @@ public class Detail extends Activity {
                 delete.setVisibility(View.GONE);
             } else {
                 report.setVisibility(View.GONE);
+                block.setVisibility(View.GONE);
             }
 
+///////////////////////댓글 삭제 //////////////////////
             delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -838,6 +843,7 @@ public class Detail extends Activity {
                 }
             });
 
+///////////////////////댓글 신고//////////////////////
             report.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -850,8 +856,66 @@ public class Detail extends Activity {
                 }
             });
 
+///////////////////////댓글 차단//////////////////////
+            block.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //Toast.makeText(getApplicationContext(), position + " clicked", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Detail.this);
+                    builder.setMessage("정말로 차단하시겠습니까?").setCancelable(false);
+                    builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    });
+                    builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                        int commentuid = comments.get(position).getUid();
+
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int id) {
+                            Response.Listener<String> responseListener = new Response.Listener<String>(){
+                                @Override
+                                public void onResponse(String response) {
+                                    try {
+                                        JSONObject jsonObject = new JSONObject(response);
+                                        boolean success = jsonObject.getBoolean("success");
+
+                                        if (success) {
+                                            for(int i=0; i<comments.size(); i++){
+                                                Log.e("comment block", comments.get(i).getContent()+" by "+Integer.toString(comments.get(i).getUid()));
+                                                if(comments.get(i).getUid() == commentuid){
+                                                    comments.remove(i);
+                                                    i--;
+                                                }
+                                            }
+                                            adapter.notifyDataSetChanged();
+                                            return;
+                                        } else {
+                                            return;
+                                        }
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                        Toast.makeText(getApplicationContext(), "예외 1", Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
+                                }
+                            };
+                            //서버로 요청
+                            BlockRequest blockRequest = new BlockRequest(auto.getString("Id", null) , Integer.toString(commentuid), responseListener);
+                            RequestQueue queue = Volley.newRequestQueue(Detail.this);
+                            queue.add(blockRequest);
+                        }
+                    });
+                    AlertDialog alert = builder.create();
+                    alert.setTitle("사용자 차단");
+                    alert.show();
+                }
+            });
+
             username.setText(comment.getName());
-            Log.e("comment.getContent()", comment.getContent());
+            //Log.e("comment.getContent()", comment.getContent());
             content.setText(comment.getContent());
 
             return convertView;  //뷰 객체 반환
@@ -914,6 +978,7 @@ public class Detail extends Activity {
     }
 
     @Override protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        SharedPreferences auto = this.getSharedPreferences("autoLogin", Activity.MODE_PRIVATE);
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE) {
             Response.Listener<String> responseListener_ustate_l = new Response.Listener<String>() {
@@ -1389,7 +1454,7 @@ public class Detail extends Activity {
                     }
                 }
             };
-            CommentlistRequest CommentlistRequest_ = new CommentlistRequest(recipe_Str, responseListener);
+            CommentlistRequest CommentlistRequest_ = new CommentlistRequest(recipe_Str, auto.getString("Id", null), responseListener);
             RequestQueue queue3 = Volley.newRequestQueue(getApplicationContext());
             queue3.add(CommentlistRequest_);
 

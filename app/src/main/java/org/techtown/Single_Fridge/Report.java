@@ -52,7 +52,7 @@ public class Report extends Activity {
     Button submit_button;
     ImageView back_button;
     RadioGroup radioGroup;
-    Integer reason, reporter,reportee,comment;
+    Integer reason, reporter, reportee, comment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +78,6 @@ public class Report extends Activity {
         //라디오 그룹 설정
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(radioGroupButtonChangeListener);
-
 
         submit_button = findViewById(R.id.button_report_submit);
         submit_button.setOnClickListener(new View.OnClickListener() {
