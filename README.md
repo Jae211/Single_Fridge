@@ -31,13 +31,12 @@ You can create an issue or email us to rememberus320@gmail.com
 ✅ 재료 선택 전에는 검색 버튼이 나타나지 않고, 1개 이상의 재료가 선택되었을 경우에만 우측 상단에 검색 버튼이 생깁니다.  
 ✅ 검색 결과로는 선택한 재료로 바로 만들 수 있는 레시피와 재료를 한 개 또는 두 개 추가했을 경우 만들 수 있는 레시피가 각각 출력됩니다.   
 
-### 🍽 상세 레시피 확인, 좋아요/북마크, 댓글 작성
+### 🍽 상세 레시피 확인, 좋아요, 북마크
 <img src="https://user-images.githubusercontent.com/71889628/177029600-fe991f98-8251-44e2-ae18-136d7587f03f.gif" width="200" height="400">&nbsp;
 <img src="https://user-images.githubusercontent.com/71889628/177029601-70312271-0a75-4329-b0ea-d9557f6561cc.gif" width="200" height="400"><br/>
 ✨ 순서대로 상세 레시피 화면, 좋아요 및 북마크, 댓글 작성 화면입니다.  
 ✅ 상세 레시피 화면에서는 레시피 이름 외에도 필요한 재료와 만드는 방법, 작성자, 댓글 등을 확인할 수 있습니다.  
 ✅ 좋아요와 북마크는 클릭 시 아이콘의 색이 채워집니다.  
-
 
 ### 🍽 댓글 작성, 신고, 차단, 삭제
 <img src="https://user-images.githubusercontent.com/71889628/177029603-9070bb4e-eb85-45da-b76e-6eb0e9dd2184.gif" width="200" height="400">&nbsp;
