@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.kakao.sdk.user.model.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -124,7 +125,7 @@ public class Fragment_recipe extends Fragment {   //레시피 tab에서 나올 �
                 }
             }
         };
-        RecipeRequest_recent RecipeRequest_recent_ = new RecipeRequest_recent(responseListener_recent);
+        RecipeRequest_recent RecipeRequest_recent_ = new RecipeRequest_recent(UserId ,responseListener_recent);
         RequestQueue queue = Volley.newRequestQueue(getContext().getApplicationContext());
         queue.add(RecipeRequest_recent_);
 
@@ -161,7 +162,7 @@ public class Fragment_recipe extends Fragment {   //레시피 tab에서 나올 �
                         }
                     }
                 };
-                RecipeRequest_recent RecipeRequest_recent_ = new RecipeRequest_recent(responseListener_recent);
+                RecipeRequest_recent RecipeRequest_recent_ = new RecipeRequest_recent(UserId, responseListener_recent);
                 RequestQueue queue = Volley.newRequestQueue(getContext().getApplicationContext());
                 queue.add(RecipeRequest_recent_);
             }
@@ -201,7 +202,7 @@ public class Fragment_recipe extends Fragment {   //레시피 tab에서 나올 �
                         }
                     }
                 };
-                RecipeRequest_popular RecipeRequest_popular_ = new RecipeRequest_popular(responseListener_popular);
+                RecipeRequest_popular RecipeRequest_popular_ = new RecipeRequest_popular(UserId, responseListener_popular);
                 RequestQueue queue = Volley.newRequestQueue(getContext().getApplicationContext());
                 queue.add(RecipeRequest_popular_);
             }

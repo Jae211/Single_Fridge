@@ -6,7 +6,9 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,6 +43,8 @@ public class Search extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        SharedPreferences auto = this.getSharedPreferences("autoLogin", Activity.MODE_PRIVATE);
 
         listView = findViewById(R.id.listView_search);
         checkBox = findViewById(R.id.CheckBox_Vegan_search);
@@ -95,7 +99,7 @@ public class Search extends AppCompatActivity {
                 }
             }
         };
-        SearchRequest searchRequest_ = new SearchRequest(keyword, responseListener);
+        SearchRequest searchRequest_ = new SearchRequest(keyword, auto.getString("Id",null), responseListener);
         RequestQueue queue = Volley.newRequestQueue(Search.this);
         queue.add(searchRequest_);
 

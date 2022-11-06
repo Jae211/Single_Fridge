@@ -66,7 +66,7 @@ public class Detail extends Activity {
     Integer liked_number, recipe_id, vegan, Uname_exist, writer_id;
     Integer liked, bookmark;
     TextView text_recipename, text_recipenamebar, writer, recipe1, recipe2, recipe3, like_num;
-    ImageView image_vegan, button_like, button_bookmark;
+    ImageView image_vegan, button_like, button_bookmark, report_button, block_button;;
     Button comment_button, edit_button, remove_button;
 
     EditText Comment;
@@ -111,6 +111,9 @@ public class Detail extends Activity {
         edit_button.setVisibility(View.GONE);
         remove_button = findViewById(R.id.button_delete);
         remove_button.setVisibility(View.GONE);
+
+        report_button = findViewById(R.id.button_report_2);
+        block_button = findViewById(R.id.button_block_2);
 
         back_button = findViewById(R.id.button_back);
         back_button.setOnClickListener(new View.OnClickListener() {
@@ -419,6 +422,65 @@ public class Detail extends Activity {
             }
         });
 
+///////////////////////글 신고 버튼 클릭 시 //////////////////////
+        report_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+///////////////////////사용자 차단 버튼 클릭 시 //////////////////////
+        block_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(Detail.this);
+                builder.setMessage("정말로 차단하시겠습니까? 차단 해제를 원하실 경우 rememberus320@gmail.com으로 문의 부탁드립니다.").setCancelable(false);
+                builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+                builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int id) {
+                        Response.Listener<String> responseListener = new Response.Listener<String>(){
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONObject jsonObject = new JSONObject(response);
+                                    boolean success = jsonObject.getBoolean("success");
+
+                                    if (success) {
+                                        Toast.makeText(getApplicationContext(), "사용자 차단이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent();
+                                        setResult(RESULT_OK, intent);
+                                        finish();
+                                        return;
+                                    } else {
+                                        return;
+                                    }
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    Toast.makeText(getApplicationContext(), "예외 1", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+                            }
+                        };
+                        //서버로 요청
+                        BlockRequest blockRequest = new BlockRequest(auto.getString("Id", null) , Integer.toString(writer_id), responseListener);
+                        RequestQueue queue = Volley.newRequestQueue(Detail.this);
+                        queue.add(blockRequest);
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.setTitle("사용자 차단");
+                alert.show();
+            }
+        });
+
 ///////////////////////레시피 정보 불러옴 //////////////////////
         Response.Listener<String> responseListener_recipe_check = new Response.Listener<String>() {
             @Override
@@ -433,6 +495,7 @@ public class Detail extends Activity {
                         if(Uname_exist==0){     //탈퇴한 사용자인 경우
                             writer = findViewById(R.id.writer);
                             writer.setText("알수없음");
+                            block_button.setVisibility(View.GONE);
 
                             recipe_name = jsonObject.getString("Recipe_name");
                             howtomake = jsonObject.getString("Recipe_content");
@@ -482,6 +545,8 @@ public class Detail extends Activity {
                                                 if(writer_id==Integer.valueOf(UserId)){
                                                     edit_button.setVisibility(View.VISIBLE);
                                                     remove_button.setVisibility(View.VISIBLE);
+                                                    report_button.setVisibility(View.GONE);
+                                                    block_button.setVisibility(View.GONE);
                                                 }
                                             }
                                             if(vegan == 1){
