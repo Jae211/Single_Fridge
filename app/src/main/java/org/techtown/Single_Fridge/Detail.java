@@ -862,7 +862,7 @@ public class Detail extends Activity {
                 public void onClick(View view) {
                     //Toast.makeText(getApplicationContext(), position + " clicked", Toast.LENGTH_SHORT).show();
                     AlertDialog.Builder builder = new AlertDialog.Builder(Detail.this);
-                    builder.setMessage("정말로 차단하시겠습니까?").setCancelable(false);
+                    builder.setMessage("정말로 차단하시겠습니까? 차단 해제를 원하실 경우 rememberus320@gmail.com으로 문의 부탁드립니다.").setCancelable(false);
                     builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {

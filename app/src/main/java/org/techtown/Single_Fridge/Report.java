@@ -93,7 +93,7 @@ public class Report extends Activity {
                             boolean success = jsonObject.getBoolean("success");
 
                             if (success) {//성공시
-                                Toast.makeText(getApplicationContext(), "신고 성공", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), "신고 성공", Toast.LENGTH_SHORT).show();
                                 finish();
                                 return;
                             } else {//실패시

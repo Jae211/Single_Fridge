@@ -26,12 +26,13 @@
                     android:id="@+id/button_back"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="#00000000"
-                    android:scaleType="fitCenter"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_weight="0"
-                    android:src="@drawable/back" />
+                    android:background="#00000000"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/back"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
@@ -53,10 +54,10 @@
                 android:id="@+id/button_nickcheck"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/button_round"
                 android:text="중복확인"
-                android:layout_marginTop="5dp"
-                />
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/text_email"
@@ -74,9 +75,10 @@
                 android:id="@+id/button_email_certification"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/button_round"
                 android:text="이메일인증"
-                android:layout_marginTop="5dp"/>
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/certification_code"
@@ -93,9 +95,10 @@
                 android:id="@+id/button_code_confirm"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/button_round"
                 android:text="인증코드 확인"
-                android:layout_marginTop="5dp"/>
+                tools:ignore="TouchTargetSizeCheck" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,6 +154,64 @@
                         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_ToS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView_ToS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="이용약관"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="에 동의" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_PP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView_PP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="개인정보처리방침"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="에 동의" />
 
             </LinearLayout>
 

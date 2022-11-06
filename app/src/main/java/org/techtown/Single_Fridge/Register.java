@@ -1,14 +1,19 @@
 package org.techtown.Single_Fridge;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -23,7 +28,7 @@ import org.json.JSONObject;
 import org.techtown.Single_Fridge.Requests.EmailRequest;
 import org.techtown.Single_Fridge.Requests.NicknameRequest;
 import org.techtown.Single_Fridge.Requests.RegisterRequest;
-import org.techtown.Single_Fridge.R;
+import org.techtown.Single_Fridge.Terms;
 
 import javax.mail.MessagingException;
 import javax.mail.SendFailedException;
@@ -34,6 +39,8 @@ public class Register extends AppCompatActivity {
     ImageButton Back_button;
     EditText Nickname, Email, Passwd, PasswdCK, Certification_code_user;
     String Certification_code_2;
+    CheckBox ToS_checkbox, PP_checkbox;
+    TextView TermsofService, PrivacyPolicy;
 
     Boolean NickCK = false; //NickCK_button 눌러서 중복확인 되면 true로 바꾸고 가입버튼 눌렀을 때 false면 중복확인 해주세요 띄우기.
     int Certification_True=0;
@@ -223,6 +230,28 @@ public class Register extends AppCompatActivity {
             }
         });
 
+        TermsofService = findViewById(R.id.textView_ToS);
+        TermsofService.setPaintFlags(TermsofService.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        TermsofService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Register.this, Terms.class);
+                intent.putExtra("info", "ToS");
+                startActivity(intent);
+            }
+        });
+
+        PrivacyPolicy = findViewById(R.id.textView_PP);
+        PrivacyPolicy.setPaintFlags(PrivacyPolicy.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        PrivacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Register.this, Terms.class);
+                intent.putExtra("info", "PP");
+                startActivity(intent);
+            }
+        });
+
         Register_button = findViewById(R.id.button_register);
         Register_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -231,6 +260,10 @@ public class Register extends AppCompatActivity {
                 String Userpw = Passwd.getText().toString();
                 String Useremail = Email.getText().toString();
                 String PassCK = PasswdCK.getText().toString();
+
+                ToS_checkbox = findViewById(R.id.checkBox_ToS);
+                PP_checkbox = findViewById(R.id.checkBox_PP);
+
                 if(Username.equals("") || Useremail.equals("") || Userpw.equals("")){
                     AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
                     dialog = builder.setMessage("정보를 모두 입력해주세요.").setNegativeButton("확인", null).create();
@@ -258,6 +291,12 @@ public class Register extends AppCompatActivity {
                 if(!Userpw.equals(PassCK)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
                     dialog = builder.setMessage("비밀번호가 일치하지 않습니다.").setNegativeButton("확인", null).create();
+                    dialog.show();
+                    return;
+                }
+                if(!ToS_checkbox.isChecked() || !PP_checkbox.isChecked()){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
+                    dialog = builder.setMessage("이용약관과 개인정보처리방침에 동의해주세요.").setNegativeButton("확인", null).create();
                     dialog.show();
                     return;
                 }

@@ -14,17 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
 
 import org.techtown.Single_Fridge.R;
+import org.techtown.Single_Fridge.Terms;
 
 public class Appinfo extends AppCompatActivity {
 
     TextView iconTextView, fontTextView, deleteiconTextView;
-    Button ossButton;
+    Button ossButton, ToSButton, PPButton;
     ImageButton back_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appinfo);
-
 
         back_button = findViewById(R.id.button_back);
         back_button.setOnClickListener(new View.OnClickListener() {
@@ -33,15 +33,9 @@ public class Appinfo extends AppCompatActivity {
                 finish();
             }
         });
+
         iconTextView = findViewById(R.id.text_veganicon);
         iconTextView.setPaintFlags(iconTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
-        fontTextView = findViewById(R.id.text_font);
-        fontTextView.setPaintFlags(fontTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
-        deleteiconTextView = findViewById(R.id.text_deleteicon);
-        deleteiconTextView.setPaintFlags(deleteiconTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
         iconTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +44,8 @@ public class Appinfo extends AppCompatActivity {
             }
         });
 
+        fontTextView = findViewById(R.id.text_font);
+        fontTextView.setPaintFlags(fontTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         fontTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,6 +54,8 @@ public class Appinfo extends AppCompatActivity {
             }
         });
 
+        deleteiconTextView = findViewById(R.id.text_deleteicon);
+        deleteiconTextView.setPaintFlags(deleteiconTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         deleteiconTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +69,26 @@ public class Appinfo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Appinfo.this, OssLicensesMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ToSButton = findViewById(R.id.button_ToS);
+        ToSButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Appinfo.this, Terms.class);
+                intent.putExtra("info", "ToS");
+                startActivity(intent);
+            }
+        });
+
+        PPButton = findViewById(R.id.button_PP);
+        PPButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Appinfo.this, Terms.class);
+                intent.putExtra("info", "PP");
                 startActivity(intent);
             }
         });
