@@ -144,6 +144,10 @@
         <activity android:name="org.techtown.Single_Fridge.Terms"
             android:exported="true">
         </activity>
+        <activity android:name=".Report_post"
+            android:exported="true"
+            android:theme="@android:style/Theme.Dialog">
+        </activity>
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />

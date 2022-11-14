@@ -426,7 +426,10 @@ public class Detail extends Activity {
         report_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Detail.this, Report_post.class);
+                intent.putExtra("post_id", Integer.toString(recipe_id));
+                intent.putExtra("post_user_id", Integer.toString(writer_id));
+                startActivityForResult(intent, REQUEST_CODE);
             }
         });
 
@@ -496,6 +499,7 @@ public class Detail extends Activity {
                             writer = findViewById(R.id.writer);
                             writer.setText("알수없음");
                             block_button.setVisibility(View.GONE);
+                            report_button.setVisibility(View.GONE);
 
                             recipe_name = jsonObject.getString("Recipe_name");
                             howtomake = jsonObject.getString("Recipe_content");

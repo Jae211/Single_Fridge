@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -60,8 +61,17 @@ public class SearchTip extends AppCompatActivity {
         remove_button.setVisibility(View.GONE);
 
         report_button = findViewById(R.id.button_report_3);
-        block_button = findViewById(R.id.button_block_3);
+        report_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchTip.this, Report_post.class);
+                intent.putExtra("post_id", Integer.toString(tip_id));
+                intent.putExtra("post_user_id", tipuser);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
 
+        block_button = findViewById(R.id.button_block_3);
         block_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
